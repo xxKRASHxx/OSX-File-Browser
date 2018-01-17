@@ -10,11 +10,4 @@
 
 @protocol RxAction <NSObject>
 
-@property (strong, nonatomic, readonly) NSString *type;
-
 @end
-
-
-
-
-

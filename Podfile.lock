@@ -1,0 +1,27 @@
+PODS:
+  - Bolts (1.9.0):
+    - Bolts/AppLinks (= 1.9.0)
+    - Bolts/Tasks (= 1.9.0)
+  - Bolts/Tasks (1.9.0)
+  - ObjectiveSugar (1.1.1)
+
+DEPENDENCIES:
+  - Bolts
+  - ObjectiveSugar (from `https://github.com/SergeyBulyno/ObjectiveSugar.git`)
+
+EXTERNAL SOURCES:
+  ObjectiveSugar:
+    :git: https://github.com/SergeyBulyno/ObjectiveSugar.git
+
+CHECKOUT OPTIONS:
+  ObjectiveSugar:
+    :commit: 1212e546bb8375f61f5abe1f9c5af76043e02f4b
+    :git: https://github.com/SergeyBulyno/ObjectiveSugar.git
+
+SPEC CHECKSUMS:
+  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
+  ObjectiveSugar: 0729eb74a757ea48b109a8902178c9b89aa58a9f
+
+PODFILE CHECKSUM: 234cfc08e3767cf75f73a5092b61d88d22133614
+
+COCOAPODS: 1.1.1

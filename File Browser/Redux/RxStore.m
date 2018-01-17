@@ -78,7 +78,7 @@
         __strong RxStore *this = w;
         return [this dispatch:action];
     };
-    
+
     self.dispatchFunction = middlewares.reverse.reduce(defaultDispatch, ^id(RxDispatchFunction df, RxMiddleware mw){
         return mw([retryDispatch copy], [getState copy])(df);
     });
