@@ -71,6 +71,7 @@
 		51EE76AD200F7EBF0080D02B /* File Browser */ = {
 			isa = PBXGroup;
 			children = (
+				51EE76D7200F84000080D02B /* Support Files */,
 				51EE76C4200F7FAB0080D02B /* Redux */,
 				51EE76C3200F7F300080D02B /* Application */,
 				51EE76C2200F7F080080D02B /* Resources */,
@@ -83,9 +84,6 @@
 			children = (
 				51EE76B4200F7EBF0080D02B /* Assets.xcassets */,
 				51EE76B6200F7EBF0080D02B /* Main.storyboard */,
-				51EE76B9200F7EBF0080D02B /* Info.plist */,
-				51EE76BC200F7EBF0080D02B /* File_Browser.entitlements */,
-				51EE76D5200F808B0080D02B /* FileBrowser.pch */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -95,7 +93,6 @@
 			children = (
 				51EE76AE200F7EBF0080D02B /* AppDelegate.h */,
 				51EE76AF200F7EBF0080D02B /* AppDelegate.m */,
-				51EE76BA200F7EBF0080D02B /* main.m */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -126,6 +123,17 @@
 				51EE76CA200F7FCF0080D02B /* NSDictionary+Redux.m */,
 			);
 			path = "Syntax shugar";
+			sourceTree = "<group>";
+		};
+		51EE76D7200F84000080D02B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				51EE76B9200F7EBF0080D02B /* Info.plist */,
+				51EE76BC200F7EBF0080D02B /* File_Browser.entitlements */,
+				51EE76D5200F808B0080D02B /* FileBrowser.pch */,
+				51EE76BA200F7EBF0080D02B /* main.m */,
+			);
+			path = "Support Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,12 +335,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "File Browser/Resources/File_Browser.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "File Browser/Support FIles/File_Browser.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 662KN2BST6;
-				GCC_PREFIX_HEADER = "File Browser/Resources/FileBrowser.pch";
-				INFOPLIST_FILE = "$(SRCROOT)/File Browser/Resources/Info.plist";
+				GCC_PREFIX_HEADER = "File Browser/Support Files/FileBrowser.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/File Browser/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.daniel-lisovoy.File-Browser";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -343,12 +351,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "File Browser/Resources/File_Browser.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "File Browser/Support FIles/File_Browser.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 662KN2BST6;
-				GCC_PREFIX_HEADER = "File Browser/Resources/FileBrowser.pch";
-				INFOPLIST_FILE = "$(SRCROOT)/File Browser/Resources/Info.plist";
+				GCC_PREFIX_HEADER = "File Browser/Support Files/FileBrowser.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/File Browser/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.daniel-lisovoy.File-Browser";
 				PRODUCT_NAME = "$(TARGET_NAME)";
