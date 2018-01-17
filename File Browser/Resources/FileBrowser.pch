@@ -1,0 +1,14 @@
+//
+//  FileBrowser.pch
+//  File Browser
+//
+//  Created by Danil Lisovoy on 1/17/18.
+//  Copyright © 2018 Danil Lisovoy. All rights reserved.
+//
+
+#ifndef FileBrowser_pch
+#define FileBrowser_pch
+
+#import "Redux.h"
+
+#endif /* FileBrowser_pch */

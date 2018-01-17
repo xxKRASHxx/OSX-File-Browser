@@ -1,0 +1,382 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		51EE76B0200F7EBF0080D02B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EE76AF200F7EBF0080D02B /* AppDelegate.m */; };
+		51EE76B5200F7EBF0080D02B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51EE76B4200F7EBF0080D02B /* Assets.xcassets */; };
+		51EE76B8200F7EBF0080D02B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51EE76B6200F7EBF0080D02B /* Main.storyboard */; };
+		51EE76BB200F7EBF0080D02B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EE76BA200F7EBF0080D02B /* main.m */; };
+		51EE76D1200F7FCF0080D02B /* NSArray+Redux.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EE76C5200F7FCE0080D02B /* NSArray+Redux.m */; };
+		51EE76D2200F7FCF0080D02B /* NSDictionary+Redux.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EE76CA200F7FCF0080D02B /* NSDictionary+Redux.m */; };
+		51EE76D3200F7FCF0080D02B /* RxStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EE76CE200F7FCF0080D02B /* RxStore.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		51EE76AB200F7EBF0080D02B /* File Browser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "File Browser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		51EE76AE200F7EBF0080D02B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		51EE76AF200F7EBF0080D02B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		51EE76B4200F7EBF0080D02B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		51EE76B7200F7EBF0080D02B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		51EE76B9200F7EBF0080D02B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51EE76BA200F7EBF0080D02B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		51EE76BC200F7EBF0080D02B /* File_Browser.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = File_Browser.entitlements; sourceTree = "<group>"; };
+		51EE76C5200F7FCE0080D02B /* NSArray+Redux.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Redux.m"; sourceTree = "<group>"; };
+		51EE76C6200F7FCE0080D02B /* RxMiddleware.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RxMiddleware.h; sourceTree = "<group>"; };
+		51EE76C7200F7FCE0080D02B /* RxState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RxState.h; sourceTree = "<group>"; };
+		51EE76C8200F7FCE0080D02B /* RxAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RxAction.h; sourceTree = "<group>"; };
+		51EE76C9200F7FCE0080D02B /* NSArray+Redux.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Redux.h"; sourceTree = "<group>"; };
+		51EE76CA200F7FCF0080D02B /* NSDictionary+Redux.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Redux.m"; sourceTree = "<group>"; };
+		51EE76CB200F7FCF0080D02B /* Redux.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Redux.h; sourceTree = "<group>"; };
+		51EE76CC200F7FCF0080D02B /* RxReducer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RxReducer.h; sourceTree = "<group>"; };
+		51EE76CD200F7FCF0080D02B /* RxStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RxStore.h; sourceTree = "<group>"; };
+		51EE76CE200F7FCF0080D02B /* RxStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RxStore.m; sourceTree = "<group>"; };
+		51EE76CF200F7FCF0080D02B /* RxSubscriber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RxSubscriber.h; sourceTree = "<group>"; };
+		51EE76D0200F7FCF0080D02B /* NSDictionary+Redux.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Redux.h"; sourceTree = "<group>"; };
+		51EE76D5200F808B0080D02B /* FileBrowser.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileBrowser.pch; sourceTree = "<group>"; };
+		51EE76D6200F81E20080D02B /* Macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		51EE76A8200F7EBF0080D02B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		51EE76A2200F7EBF0080D02B = {
+			isa = PBXGroup;
+			children = (
+				51EE76AD200F7EBF0080D02B /* File Browser */,
+				51EE76AC200F7EBF0080D02B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		51EE76AC200F7EBF0080D02B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				51EE76AB200F7EBF0080D02B /* File Browser.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		51EE76AD200F7EBF0080D02B /* File Browser */ = {
+			isa = PBXGroup;
+			children = (
+				51EE76C4200F7FAB0080D02B /* Redux */,
+				51EE76C3200F7F300080D02B /* Application */,
+				51EE76C2200F7F080080D02B /* Resources */,
+			);
+			path = "File Browser";
+			sourceTree = "<group>";
+		};
+		51EE76C2200F7F080080D02B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				51EE76B4200F7EBF0080D02B /* Assets.xcassets */,
+				51EE76B6200F7EBF0080D02B /* Main.storyboard */,
+				51EE76B9200F7EBF0080D02B /* Info.plist */,
+				51EE76BC200F7EBF0080D02B /* File_Browser.entitlements */,
+				51EE76D5200F808B0080D02B /* FileBrowser.pch */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		51EE76C3200F7F300080D02B /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				51EE76AE200F7EBF0080D02B /* AppDelegate.h */,
+				51EE76AF200F7EBF0080D02B /* AppDelegate.m */,
+				51EE76BA200F7EBF0080D02B /* main.m */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		51EE76C4200F7FAB0080D02B /* Redux */ = {
+			isa = PBXGroup;
+			children = (
+				51EE76D4200F7FDE0080D02B /* Syntax shugar */,
+				51EE76CB200F7FCF0080D02B /* Redux.h */,
+				51EE76D6200F81E20080D02B /* Macros.h */,
+				51EE76C8200F7FCE0080D02B /* RxAction.h */,
+				51EE76C6200F7FCE0080D02B /* RxMiddleware.h */,
+				51EE76CC200F7FCF0080D02B /* RxReducer.h */,
+				51EE76C7200F7FCE0080D02B /* RxState.h */,
+				51EE76CD200F7FCF0080D02B /* RxStore.h */,
+				51EE76CE200F7FCF0080D02B /* RxStore.m */,
+				51EE76CF200F7FCF0080D02B /* RxSubscriber.h */,
+			);
+			path = Redux;
+			sourceTree = "<group>";
+		};
+		51EE76D4200F7FDE0080D02B /* Syntax shugar */ = {
+			isa = PBXGroup;
+			children = (
+				51EE76C9200F7FCE0080D02B /* NSArray+Redux.h */,
+				51EE76C5200F7FCE0080D02B /* NSArray+Redux.m */,
+				51EE76D0200F7FCF0080D02B /* NSDictionary+Redux.h */,
+				51EE76CA200F7FCF0080D02B /* NSDictionary+Redux.m */,
+			);
+			path = "Syntax shugar";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		51EE76AA200F7EBF0080D02B /* File Browser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51EE76BF200F7EBF0080D02B /* Build configuration list for PBXNativeTarget "File Browser" */;
+			buildPhases = (
+				51EE76A7200F7EBF0080D02B /* Sources */,
+				51EE76A8200F7EBF0080D02B /* Frameworks */,
+				51EE76A9200F7EBF0080D02B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "File Browser";
+			productName = "File Browser";
+			productReference = 51EE76AB200F7EBF0080D02B /* File Browser.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		51EE76A3200F7EBF0080D02B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Danil Lisovoy";
+				TargetAttributes = {
+					51EE76AA200F7EBF0080D02B = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 51EE76A6200F7EBF0080D02B /* Build configuration list for PBXProject "File Browser" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 51EE76A2200F7EBF0080D02B;
+			productRefGroup = 51EE76AC200F7EBF0080D02B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				51EE76AA200F7EBF0080D02B /* File Browser */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		51EE76A9200F7EBF0080D02B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51EE76B5200F7EBF0080D02B /* Assets.xcassets in Resources */,
+				51EE76B8200F7EBF0080D02B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		51EE76A7200F7EBF0080D02B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51EE76BB200F7EBF0080D02B /* main.m in Sources */,
+				51EE76D3200F7FCF0080D02B /* RxStore.m in Sources */,
+				51EE76D2200F7FCF0080D02B /* NSDictionary+Redux.m in Sources */,
+				51EE76B0200F7EBF0080D02B /* AppDelegate.m in Sources */,
+				51EE76D1200F7FCF0080D02B /* NSArray+Redux.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		51EE76B6200F7EBF0080D02B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				51EE76B7200F7EBF0080D02B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		51EE76BD200F7EBF0080D02B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		51EE76BE200F7EBF0080D02B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		51EE76C0200F7EBF0080D02B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "File Browser/Resources/File_Browser.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 662KN2BST6;
+				GCC_PREFIX_HEADER = "File Browser/Resources/FileBrowser.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/File Browser/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.daniel-lisovoy.File-Browser";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		51EE76C1200F7EBF0080D02B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "File Browser/Resources/File_Browser.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 662KN2BST6;
+				GCC_PREFIX_HEADER = "File Browser/Resources/FileBrowser.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/File Browser/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.daniel-lisovoy.File-Browser";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		51EE76A6200F7EBF0080D02B /* Build configuration list for PBXProject "File Browser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51EE76BD200F7EBF0080D02B /* Debug */,
+				51EE76BE200F7EBF0080D02B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		51EE76BF200F7EBF0080D02B /* Build configuration list for PBXNativeTarget "File Browser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51EE76C0200F7EBF0080D02B /* Debug */,
+				51EE76C1200F7EBF0080D02B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 51EE76A3200F7EBF0080D02B /* Project object */;
+}
