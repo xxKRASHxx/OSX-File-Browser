@@ -8,8 +8,10 @@
 
 #import <Cocoa/Cocoa.h>
 
+FOUNDATION_EXTERN RxStore *MainStore;
+
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
+@property (strong, nonatomic, readonly) RxStore *store;
 
 @end
-

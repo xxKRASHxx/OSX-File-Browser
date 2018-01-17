@@ -9,6 +9,11 @@
 #ifndef FileBrowser_pch
 #define FileBrowser_pch
 
+#import <Bolts/Bolts.h>
+#import <ObjectiveSugar/ObjectiveSugar.h>
+
+#import "NSObject+Cast.h"
+#import "FBSyntaxShugar.h"
 #import "Redux.h"
 
 #endif /* FileBrowser_pch */
