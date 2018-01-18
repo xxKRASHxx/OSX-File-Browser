@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		446D791EB1B340A7419C2729 /* Pods_File_Browser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A385834FB6FC18E35534868F /* Pods_File_Browser.framework */; };
+		5170E3C7201135F000023444 /* FBAPIBuilder+FBFileService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5170E3C6201135F000023444 /* FBAPIBuilder+FBFileService.m */; };
+		5170E3CA20113F4300023444 /* FBAPIParser+FBFileService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5170E3C920113F4300023444 /* FBAPIParser+FBFileService.m */; };
+		5170E3CE20113F7800023444 /* FBFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 5170E3CD20113F7800023444 /* FBFile.m */; };
+		5170E3D12011433200023444 /* FBAPIClient+FBFileService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5170E3D02011433200023444 /* FBAPIClient+FBFileService.m */; };
+		5170E3D42011452C00023444 /* FBPrefetchFilesMiddleware.m in Sources */ = {isa = PBXBuildFile; fileRef = 5170E3D32011452C00023444 /* FBPrefetchFilesMiddleware.m */; };
+		5170E3D92011489100023444 /* FBFetchFilesAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 5170E3D82011489100023444 /* FBFetchFilesAction.m */; };
+		5170E3DC20114B7D00023444 /* FBFilesState.m in Sources */ = {isa = PBXBuildFile; fileRef = 5170E3DB20114B7D00023444 /* FBFilesState.m */; };
+		5170E3E42011552B00023444 /* FBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5170E3E32011552B00023444 /* FBViewController.m */; };
+		5170E3E720115A7900023444 /* FBFileReducer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5170E3E620115A7900023444 /* FBFileReducer.m */; };
 		51EE76B0200F7EBF0080D02B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EE76AF200F7EBF0080D02B /* AppDelegate.m */; };
 		51EE76B5200F7EBF0080D02B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51EE76B4200F7EBF0080D02B /* Assets.xcassets */; };
 		51EE76B8200F7EBF0080D02B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51EE76B6200F7EBF0080D02B /* Main.storyboard */; };
@@ -36,6 +45,24 @@
 /* Begin PBXFileReference section */
 		002CDF48ED86BA5D30B78F2F /* Pods-File Browser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-File Browser.debug.xcconfig"; path = "Pods/Target Support Files/Pods-File Browser/Pods-File Browser.debug.xcconfig"; sourceTree = "<group>"; };
 		4D4569038E60564840542123 /* Pods-File Browser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-File Browser.release.xcconfig"; path = "Pods/Target Support Files/Pods-File Browser/Pods-File Browser.release.xcconfig"; sourceTree = "<group>"; };
+		5170E3C5201135F000023444 /* FBAPIBuilder+FBFileService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FBAPIBuilder+FBFileService.h"; sourceTree = "<group>"; };
+		5170E3C6201135F000023444 /* FBAPIBuilder+FBFileService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FBAPIBuilder+FBFileService.m"; sourceTree = "<group>"; };
+		5170E3C820113F4300023444 /* FBAPIParser+FBFileService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FBAPIParser+FBFileService.h"; sourceTree = "<group>"; };
+		5170E3C920113F4300023444 /* FBAPIParser+FBFileService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FBAPIParser+FBFileService.m"; sourceTree = "<group>"; };
+		5170E3CC20113F7800023444 /* FBFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBFile.h; sourceTree = "<group>"; };
+		5170E3CD20113F7800023444 /* FBFile.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBFile.m; sourceTree = "<group>"; };
+		5170E3CF2011433200023444 /* FBAPIClient+FBFileService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FBAPIClient+FBFileService.h"; sourceTree = "<group>"; };
+		5170E3D02011433200023444 /* FBAPIClient+FBFileService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FBAPIClient+FBFileService.m"; sourceTree = "<group>"; };
+		5170E3D22011452C00023444 /* FBPrefetchFilesMiddleware.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBPrefetchFilesMiddleware.h; sourceTree = "<group>"; };
+		5170E3D32011452C00023444 /* FBPrefetchFilesMiddleware.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBPrefetchFilesMiddleware.m; sourceTree = "<group>"; };
+		5170E3D72011489100023444 /* FBFetchFilesAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBFetchFilesAction.h; sourceTree = "<group>"; };
+		5170E3D82011489100023444 /* FBFetchFilesAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBFetchFilesAction.m; sourceTree = "<group>"; };
+		5170E3DA20114B7D00023444 /* FBFilesState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBFilesState.h; sourceTree = "<group>"; };
+		5170E3DB20114B7D00023444 /* FBFilesState.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBFilesState.m; sourceTree = "<group>"; };
+		5170E3E22011552B00023444 /* FBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBViewController.h; sourceTree = "<group>"; };
+		5170E3E32011552B00023444 /* FBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBViewController.m; sourceTree = "<group>"; };
+		5170E3E520115A7900023444 /* FBFileReducer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBFileReducer.h; sourceTree = "<group>"; };
+		5170E3E620115A7900023444 /* FBFileReducer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBFileReducer.m; sourceTree = "<group>"; };
 		51EE76AB200F7EBF0080D02B /* File Browser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "File Browser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		51EE76AE200F7EBF0080D02B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		51EE76AF200F7EBF0080D02B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -123,6 +150,74 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		5170E3C4201134D800023444 /* FileService */ = {
+			isa = PBXGroup;
+			children = (
+				5170E3CF2011433200023444 /* FBAPIClient+FBFileService.h */,
+				5170E3D02011433200023444 /* FBAPIClient+FBFileService.m */,
+				5170E3C5201135F000023444 /* FBAPIBuilder+FBFileService.h */,
+				5170E3C6201135F000023444 /* FBAPIBuilder+FBFileService.m */,
+				5170E3C820113F4300023444 /* FBAPIParser+FBFileService.h */,
+				5170E3C920113F4300023444 /* FBAPIParser+FBFileService.m */,
+			);
+			path = FileService;
+			sourceTree = "<group>";
+		};
+		5170E3CB20113F6800023444 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				5170E3CC20113F7800023444 /* FBFile.h */,
+				5170E3CD20113F7800023444 /* FBFile.m */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		5170E3D52011485200023444 /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				51EE76ED200F98B70080D02B /* FBSignInAction.h */,
+				51EE76EE200F98B70080D02B /* FBSignInAction.m */,
+				51EE76F6200FBCF70080D02B /* FBSignoutAction.h */,
+				51EE76F7200FBCF70080D02B /* FBSignoutAction.m */,
+				51EE771D201001670080D02B /* FBSignInResult.h */,
+				51EE771E201001670080D02B /* FBSignInResult.m */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
+		5170E3D62011486500023444 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				5170E3D72011489100023444 /* FBFetchFilesAction.h */,
+				5170E3D82011489100023444 /* FBFetchFilesAction.m */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
+		5170E3E0201154E500023444 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				51EE76DC200F88650080D02B /* States */,
+				51EE76D8200F86240080D02B /* Middlewares */,
+				51EE76E4200F927A0080D02B /* Reducers */,
+				51EE76EB200F97830080D02B /* Services */,
+				51EE76EC200F98000080D02B /* Actions */,
+				5170E3CB20113F6800023444 /* DTO */,
+				51EE76D4200F7FDE0080D02B /* Syntax shugar */,
+				51EE76C4200F7FAB0080D02B /* Redux */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		5170E3E12011551600023444 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				5170E3E22011552B00023444 /* FBViewController.h */,
+				5170E3E32011552B00023444 /* FBViewController.m */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
 		51EE76A2200F7EBF0080D02B = {
 			isa = PBXGroup;
 			children = (
@@ -144,16 +239,11 @@
 		51EE76AD200F7EBF0080D02B /* File Browser */ = {
 			isa = PBXGroup;
 			children = (
+				5170E3E12011551600023444 /* Presentation */,
 				51EE76C3200F7F300080D02B /* Application */,
-				51EE76DC200F88650080D02B /* States */,
-				51EE76D8200F86240080D02B /* Middlewares */,
-				51EE76E4200F927A0080D02B /* Reducers */,
-				51EE76EB200F97830080D02B /* Services */,
-				51EE76EC200F98000080D02B /* Actions */,
-				51EE76D7200F84000080D02B /* Support Files */,
-				51EE76D4200F7FDE0080D02B /* Syntax shugar */,
-				51EE76C4200F7FAB0080D02B /* Redux */,
 				51EE76C2200F7F080080D02B /* Resources */,
+				51EE76D7200F84000080D02B /* Support Files */,
+				5170E3E0201154E500023444 /* Core */,
 			);
 			path = "File Browser";
 			sourceTree = "<group>";
@@ -220,6 +310,8 @@
 			children = (
 				51EE76D9200F869E0080D02B /* FBLogger.h */,
 				51EE76DA200F869E0080D02B /* FBLogger.m */,
+				5170E3D22011452C00023444 /* FBPrefetchFilesMiddleware.h */,
+				5170E3D32011452C00023444 /* FBPrefetchFilesMiddleware.m */,
 			);
 			path = Middlewares;
 			sourceTree = "<group>";
@@ -231,6 +323,8 @@
 				51EE76E2200F89910080D02B /* FBAppState.m */,
 				51EE76DD200F888A0080D02B /* FBAuthorizationState.h */,
 				51EE76DE200F888A0080D02B /* FBAuthorizationState.m */,
+				5170E3DA20114B7D00023444 /* FBFilesState.h */,
+				5170E3DB20114B7D00023444 /* FBFilesState.m */,
 			);
 			path = States;
 			sourceTree = "<group>";
@@ -242,6 +336,8 @@
 				51EE7715200FDBD00080D02B /* FBAppReducer.m */,
 				51EE76E5200F93080080D02B /* FBAuthorizationReducer.h */,
 				51EE76E6200F93080080D02B /* FBAuthorizationReducer.m */,
+				5170E3E520115A7900023444 /* FBFileReducer.h */,
+				5170E3E620115A7900023444 /* FBFileReducer.m */,
 			);
 			path = Reducers;
 			sourceTree = "<group>";
@@ -257,12 +353,8 @@
 		51EE76EC200F98000080D02B /* Actions */ = {
 			isa = PBXGroup;
 			children = (
-				51EE76ED200F98B70080D02B /* FBSignInAction.h */,
-				51EE76EE200F98B70080D02B /* FBSignInAction.m */,
-				51EE76F6200FBCF70080D02B /* FBSignoutAction.h */,
-				51EE76F7200FBCF70080D02B /* FBSignoutAction.m */,
-				51EE771D201001670080D02B /* FBSignInResult.h */,
-				51EE771E201001670080D02B /* FBSignInResult.m */,
+				5170E3D52011485200023444 /* Authorization */,
+				5170E3D62011486500023444 /* Files */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -270,8 +362,9 @@
 		51EE7707200FD06B0080D02B /* APIClient */ = {
 			isa = PBXGroup;
 			children = (
-				51EE770E200FD3000080D02B /* AuthService */,
 				51EE7713200FD3840080D02B /* Generic */,
+				5170E3C4201134D800023444 /* FileService */,
+				51EE770E200FD3000080D02B /* AuthService */,
 			);
 			path = APIClient;
 			sourceTree = "<group>";
@@ -429,25 +522,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				51EE7716200FDBD00080D02B /* FBAppReducer.m in Sources */,
+				5170E3D12011433200023444 /* FBAPIClient+FBFileService.m in Sources */,
 				51EE76BB200F7EBF0080D02B /* main.m in Sources */,
 				51EE76E7200F93080080D02B /* FBAuthorizationReducer.m in Sources */,
+				5170E3CE20113F7800023444 /* FBFile.m in Sources */,
 				51EE76EA200F93970080D02B /* NSObject+Cast.m in Sources */,
 				51EE76E3200F89910080D02B /* FBAppState.m in Sources */,
+				5170E3CA20113F4300023444 /* FBAPIParser+FBFileService.m in Sources */,
 				51EE770A200FD0CB0080D02B /* FBAPIBuilder.m in Sources */,
 				51EE76DF200F888A0080D02B /* FBAuthorizationState.m in Sources */,
 				51EE76D3200F7FCF0080D02B /* RxStore.m in Sources */,
+				5170E3C7201135F000023444 /* FBAPIBuilder+FBFileService.m in Sources */,
 				51EE770D200FD1D10080D02B /* FBAPIParser.m in Sources */,
+				5170E3E42011552B00023444 /* FBViewController.m in Sources */,
+				5170E3DC20114B7D00023444 /* FBFilesState.m in Sources */,
 				51EE7700200FCC950080D02B /* FBAPICliendResult.m in Sources */,
 				51EE7706200FD04E0080D02B /* NSError+FBAPIClient.m in Sources */,
 				51EE76B0200F7EBF0080D02B /* AppDelegate.m in Sources */,
 				51EE76FB200FBDBC0080D02B /* FBAPIClient.m in Sources */,
+				5170E3D42011452C00023444 /* FBPrefetchFilesMiddleware.m in Sources */,
 				51EE771F201001670080D02B /* FBSignInResult.m in Sources */,
+				5170E3D92011489100023444 /* FBFetchFilesAction.m in Sources */,
 				51EE7719200FE2F00080D02B /* FBAPIParser+FBAuthService.m in Sources */,
 				51EE771C200FE39A0080D02B /* FBAPIBuilder+FBAuthService.m in Sources */,
 				51EE76EF200F98B70080D02B /* FBSignInAction.m in Sources */,
 				51EE7711200FD32C0080D02B /* FBAPIClient+FBAuthService.m in Sources */,
 				51EE76DB200F869E0080D02B /* FBLogger.m in Sources */,
 				51EE7703200FCF270080D02B /* NSArray+Redux.m in Sources */,
+				5170E3E720115A7900023444 /* FBFileReducer.m in Sources */,
 				51EE76F8200FBCF70080D02B /* FBSignoutAction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
