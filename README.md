@@ -13,37 +13,6 @@ Example for HTTP Header is like below (suppose that token value received is `AAA
 Authorization: Bearer AAABBBCCCC...
 ```
 
-Source example:
-
-```objc
-#import <Foundation/Foundation.h>
-
-NSDictionary *headers = @{ @"authorization": @"Bearer AAABBBCCCC..." };
-
-NSData *postData = [[NSData alloc] initWithData:[@"" dataUsingEncoding:NSUTF8StringEncoding]];
-
-NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://198.211.123.33:9998/file/e521edc0-fa16-11e7-b2af-45c3347d17b6"]
-                                                       cachePolicy:NSURLRequestUseProtocolCachePolicy
-                                                   timeoutInterval:10.0];
-[request setHTTPMethod:@"GET"];
-[request setAllHTTPHeaderFields:headers];
-[request setHTTPBody:postData];
-
-NSURLSession *session = [NSURLSession sharedSession];
-NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request
-                                            completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-                                                if (error) {
-                                                    NSLog(@"%@", error);
-                                                } else {
-                                                    NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
-                                                    NSLog(@"%@", httpResponse);
-                                                }
-                                            }];
-[dataTask resume];
-```
-
-
-
 ## Security:
 
 JWT Token via `Authorization` Header Field. Example:
