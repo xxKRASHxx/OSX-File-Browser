@@ -7,6 +7,7 @@
 //
 
 #import "FBAPIBuilder+FBFileService.h"
+#import "NSData+FBMultipart.h"
 
 @implementation FBAPIBuilder (FBFileService)
 
@@ -37,13 +38,20 @@
 
 + (NSURLRequest *)uploadFileRequestWithToken:(NSString *)jwt
                                         data:(NSData *)data {
-    NSString *boundary = [[NSString alloc] initWithData:data
-                                               encoding:NSUTF8StringEncoding];
+    NSString *boundary = NSUUID.new.UUIDString;
+    NSData *body = [data byMakingMultipartBodyWithBoundary:boundary
+                                                      name:@"secfile"
+                                                  fileName:@"image.jpg"];
+    NSDictionary *headers =
+    @{
+      @"Content-Type" : [NSString stringWithFormat:@"multipart/form-data; boundary=%@", boundary],
+      @"Content-Length" : @(body.length).stringValue
+      };
     return [self requestWithURL:self.filesListURL
-                         method:FBAPIClientMethodGet
+                         method:FBAPIClientMethodPost
                           token:jwt
-                     parameters:@{ @"Content-Type" : @"multipart/form-data;",
-                                   @"boundary" : boundary }];
+                        headers:headers
+                           data:body];
 }
 
 @end

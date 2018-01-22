@@ -23,6 +23,8 @@ extern NSString * const kFBAuthServerBaseURL;
 
 @interface FBAPIClient : NSObject
 
++ (instancetype)shared;
+
 @property (nonatomic, strong) NSString *token;
 
 - (BFTask *)performDataTaskWithRequest:(NSURLRequest *)request;

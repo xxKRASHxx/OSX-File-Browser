@@ -18,7 +18,10 @@ NSString * const kFBAPIErrorDomain = @"FBAPIClient";
 @implementation NSError (FBAPIClient)
 
 + (NSError *)errorFromURLResponce:(NSURLResponse *)responce {
+    return [self errorFromURLResponce:responce meta:nil];
+}
 
++ (NSError *)errorFromURLResponce:(NSURLResponse *)responce meta:(NSDictionary *)meta {
     guard_ret(responce, [NSError errorWithDomain:kFBAPIErrorDomain
                                             code:kFBAPIResponceNilCode
                                         userInfo:@{NSLocalizedDescriptionKey : @"NSHTTPURLResponse is nil"}]);
@@ -31,7 +34,8 @@ NSString * const kFBAPIErrorDomain = @"FBAPIClient";
     guard_ret((![@[@(200), @(202)] containsObject:@(httpResponce.statusCode)]), nil);
     return [NSError errorWithDomain:kFBAPIErrorDomain
                                code:httpResponce.statusCode
-                           userInfo:@{@"responce" : responce}];
+                           userInfo:@{@"responce" : responce,
+                                      @"meta" : meta}];
 }
 
 + (NSError *)errorFromStatus:(NSNumber *)code meta:(NSDictionary *)meta {

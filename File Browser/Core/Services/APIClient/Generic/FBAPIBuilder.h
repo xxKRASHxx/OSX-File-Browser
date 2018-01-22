@@ -21,11 +21,23 @@
 
 + (NSURLRequest *)requestWithURL:(NSURL *)url
                           method:(FBAPIClientMethod)method
+                         headers:(NSDictionary<NSString *, NSString*> *)headers
+                      parameters:(NSDictionary *)parameters;
+
++ (NSURLRequest *)requestWithURL:(NSURL *)url
+                          method:(FBAPIClientMethod)method
                            token:(NSString *)token
                       parameters:(NSDictionary *)parameters;
 
 + (NSURLRequest *)requestWithURL:(NSURL *)url
+                          method:(FBAPIClientMethod)method
+                           token:(NSString *)token
+                         headers:(NSDictionary<NSString *, NSString*> *)headers
+                            data:(NSData *)body;
+
++ (NSURLRequest *)requestWithURL:(NSURL *)url
                           method:(NSString *)method
+                         headers:(NSDictionary<NSString *, NSString*> *)headers
                             data:(NSData *)body;
 
 @end

@@ -17,7 +17,7 @@
         guard_ret(task.result, task);
         NSDictionary *json = [NSDictionary cast:task.result];
 
-        NSDictionary *anyData = [NSDictionary cast:json[@"data"]];
+        id anyData = json[@"data"];
         NSNumber *status      = [NSNumber cast:json[@"status"]];
         NSDictionary *anyMeta = [NSDictionary cast:json[@"meta"]];
 
@@ -31,9 +31,13 @@
         guard_ret(task.result, task);
         FBAPICliendResult *result = [FBAPICliendResult cast:task.result];
         NSError *error;
-        guard_ret(!(error = [NSError errorFromURLResponce:result.responce]),
+
+        guard_ret(!(error = [NSError
+                             errorFromURLResponce:result.responce
+                             meta:self.parseDictionary([BFTask taskWithResult:result.data])]),
                   [BFTask taskWithError:error]);
-        return [FBAPICliendResult cast:task.result].data;
+
+        return result.data;
     };
 }
 

@@ -11,8 +11,6 @@
 @interface FBAPIBuilder (FBFileService)
 
 + (NSURLRequest *)filesListRequestWithToken:(NSString *)jwt;
-+ (NSURLRequest *)downloadFileRequestWithToken:(NSString *)jwt
-                                      filename:(NSString *)name;
 + (NSURLRequest *)uploadFileRequestWithToken:(NSString *)jwt
                                         data:(NSData *)data;
 

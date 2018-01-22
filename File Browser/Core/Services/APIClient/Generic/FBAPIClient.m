@@ -27,7 +27,19 @@ extern NSString *NSStringFromRequestMethod(FBAPIClientMethod aMethod) {
 
 NSString * const kFBAuthServerBaseURL = @"http://198.211.123.33:9998";
 
+static FBAPIClient *sharedInstance = nil;
+
 @implementation FBAPIClient
+
++ (void)initialize {
+    if (self == FBAPIClient.class) {
+        sharedInstance = FBAPIClient.new;
+    }
+}
+
++ (instancetype)shared {
+    return sharedInstance;
+}
 
 - (BFTask *)performDataTaskWithRequest:(NSURLRequest *)request {
     BFTaskCompletionSource *completion = [BFTaskCompletionSource taskCompletionSource];

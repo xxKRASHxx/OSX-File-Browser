@@ -17,9 +17,9 @@
 
 FBAPIClient *authService;
 
-id<FBAuthorizationState> processLogin (FBSignInAction *action, id<FBAuthorizationState> state);
-id<FBAuthorizationState> processLogout (FBSignoutAction *action, id<FBAuthorizationState> state);
-id<FBAuthorizationState> processError (FBSignInFail *action, id<FBAuthorizationState> state);
+id<FBAuthorizationState> processLogin   (FBSignInAction *action,  id<FBAuthorizationState> state);
+id<FBAuthorizationState> processLogout  (FBSignoutAction *action, id<FBAuthorizationState> state);
+id<FBAuthorizationState> processError   (FBSignInFail *action,    id<FBAuthorizationState> state);
 id<FBAuthorizationState> processSuccess (FBSignInSuccess *action, id<FBAuthorizationState> state);
 
 RxReducer FBAuthorizationReducer = ^ id<FBAuthorizationState> (id<RxAction> action, id<FBAuthorizationState> state) {
@@ -31,7 +31,7 @@ RxReducer FBAuthorizationReducer = ^ id<FBAuthorizationState> (id<RxAction> acti
 };
 
 __attribute__((constructor)) void setupAuthService() {
-    authService = [FBAPIClient new];
+    authService = FBAPIClient.shared;
 }
 
 id<FBAuthorizationState> processLogin (FBSignInAction *action, id<FBAuthorizationState> state) {

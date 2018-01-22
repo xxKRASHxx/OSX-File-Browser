@@ -11,5 +11,6 @@
 @interface FBAPIParser (FBFileService)
 
 + (id(^)(BFTask *))parseFiles;
++ (id(^)(BFTask *))parseFile;
 
 @end

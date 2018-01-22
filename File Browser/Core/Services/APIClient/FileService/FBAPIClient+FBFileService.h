@@ -11,7 +11,6 @@
 @interface FBAPIClient (FBFileService)
 
 - (BFTask *)filesList;
-- (BFTask *)downloadFileWithFilename:(NSString *)name;
 - (BFTask *)uploadFileWithData:(NSData *)data;
 
 @end

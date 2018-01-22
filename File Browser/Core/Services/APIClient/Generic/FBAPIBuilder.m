@@ -8,6 +8,8 @@
 
 #import "FBAPIBuilder.h"
 
+static NSString * const kTokenFormat = @"Bearer %@";
+
 @implementation FBAPIBuilder
 
 + (NSURL *)baseURL {
@@ -28,30 +30,51 @@
 
 + (NSURLRequest *)requestWithURL:(NSURL *)url
                           method:(FBAPIClientMethod)method
-                           token:(NSString *)token
                       parameters:(NSDictionary *)parameters {
-
-    NSMutableDictionary *withToken = @{}.mutableCopy;
-    withToken[@"authorization"] = token;
-    [withToken addEntriesFromDictionary:parameters];
-
     return [self requestWithURL:url
                          method:method
-                     parameters:withToken.copy];
+                        headers:nil
+                     parameters:parameters];
 }
 
 + (NSURLRequest *)requestWithURL:(NSURL *)url
                           method:(FBAPIClientMethod)method
+                           token:(NSString *)token
+                      parameters:(NSDictionary *)parameters {
+    return [self requestWithURL:url
+                         method:method
+                        headers:@{@"authorization" : [NSString stringWithFormat:kTokenFormat, token]}
+                     parameters:parameters];
+}
+
++ (NSURLRequest *)requestWithURL:(NSURL *)url
+                          method:(FBAPIClientMethod)method
+                         headers:(NSDictionary<NSString *, NSString*> *)headers
                       parameters:(NSDictionary *)parameters {
     return [self requestWithURL:url
                          method:NSStringFromRequestMethod(method)
+                        headers:headers
                            data:[self dataFromDictionary:parameters]];
 }
 
 + (NSURLRequest *)requestWithURL:(NSURL *)url
+                          method:(FBAPIClientMethod)method
+                           token:(NSString *)token
+                         headers:(NSDictionary<NSString *, NSString*> *)headers
+                            data:(NSData *)body {
+    NSMutableDictionary *allHeaders = headers ? headers.mutableCopy : @{}.mutableCopy;
+    allHeaders[@"authorization"] = [NSString stringWithFormat:kTokenFormat, token];
+    return [self requestWithURL:url
+                         method:NSStringFromRequestMethod(method)
+                        headers:allHeaders.copy
+                           data:body];
+}
++ (NSURLRequest *)requestWithURL:(NSURL *)url
                           method:(NSString *)method
+                         headers:(NSDictionary<NSString *, NSString*> *)headers
                             data:(NSData *)body {
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    request.allHTTPHeaderFields = headers;
     request.HTTPMethod = method;
     request.HTTPBody = body;
     return request;

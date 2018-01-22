@@ -16,6 +16,7 @@ extern NSString *const kFBAPIErrorDomain;
 
 @interface NSError (FBAPIClient)
 
++ (NSError *)errorFromURLResponce:(NSURLResponse *)responce meta:(NSDictionary *)meta;
 + (NSError *)errorFromURLResponce:(NSURLResponse *)responce;
 + (NSError *)errorFromStatus:(NSNumber *)code meta:(NSDictionary *)meta;
 + (NSError *)invalidJSON;

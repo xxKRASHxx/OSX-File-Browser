@@ -19,21 +19,13 @@
                continueWithBlock:FBAPIParser.parseData]
                continueWithBlock:FBAPIParser.parseFiles];
 }
-//
-//- (BFTask *)downloadFileWithFilename:(NSString *)name {
-//    return [[[[[self performDataTaskWithRequest:
-//                [FBAPIBuilder authRequestForUsername:username password:password]]
-//               continueWithBlock:FBAPIParser.parseResponce]
-//              continueWithBlock:FBAPIParser.parseDictionary]
-//             continueWithBlock:FBAPIParser.parseData]
-//}
-//
-//- (BFTask *)uploadFileWithData:(NSData *)data {
-//    return [[[[[self performDataTaskWithRequest:
-//                [FBAPIBuilder authRequestForUsername:username password:password]]
-//               continueWithBlock:FBAPIParser.parseResponce]
-//              continueWithBlock:FBAPIParser.parseDictionary]
-//             continueWithBlock:FBAPIParser.parseData]
-//}
+
+- (BFTask *)uploadFileWithData:(NSData *)data {
+    return [[[[[self performDataTaskWithRequest:[FBAPIBuilder uploadFileRequestWithToken:self.token data:data]]
+               continueWithBlock:FBAPIParser.parseResponce]
+               continueWithBlock:FBAPIParser.parseDictionary]
+               continueWithBlock:FBAPIParser.parseData]
+               continueWithBlock:FBAPIParser.parseFile];
+}
 
 @end
