@@ -10,9 +10,9 @@
 
 @implementation NSData (FBMultipart)
 
-- (instancetype)byMakingMultipartWith:(NSString *)boundary
-                                 name:(NSString *)name
-                             fileName:(NSString *)filename {
+- (instancetype)byMakingMultipartBodyWithBoundary:(NSString *)boundary
+                                             name:(NSString *)name
+                                         fileName:(NSString *)filename {
     NSMutableData *body = [NSMutableData data];
     NSMutableString *string = [NSMutableString new];
 
