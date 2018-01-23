@@ -7,7 +7,7 @@
 //
 
 #import "FBFileReducer.h"
-#import "AppDelegate.h"
+#import "FBWindowController.h"
 #import "FBFilesState.h"
 
 #import "FBFetchFilesAction.h"

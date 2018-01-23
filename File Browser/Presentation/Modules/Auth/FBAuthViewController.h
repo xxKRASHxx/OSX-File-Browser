@@ -8,6 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface FBViewController : NSViewController
+@interface FBAuthViewController : NSViewController
 
 @end
