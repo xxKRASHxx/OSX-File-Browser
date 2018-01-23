@@ -13,11 +13,14 @@
 #import "FBFile.h"
 #import "NSCollectionViewItem+FBIdentifier.h"
 #import "FBPreviewItem.h"
+#import "FBDropView.h"
+#import "FBUploadFileAction.h"
 
 @interface FBListViewController () <RxSubscriber, NSCollectionViewDelegate, NSCollectionViewDataSource>
 
 @property (weak) IBOutlet NSCollectionView *collectionView;
 @property (nonatomic, strong) NSArray<FBFile *> *files;
+@property (weak) IBOutlet FBDropView *dropView;
 
 @end
 
@@ -25,10 +28,13 @@
 
 #pragma mark - Lifecycle
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupObserving];
     [self setupCollectionView];
+    [self setupDropView];
 }
 
 - (void)setupObserving {
@@ -40,6 +46,12 @@
 - (void)setupCollectionView {
     [self.collectionView registerNib:FBPreviewItem.nib
                forItemWithIdentifier:FBPreviewItem.identifier];
+}
+
+- (void)setupDropView {
+    self.dropView.uploadAtURL = ^(NSURL *url) {
+        [MainStore dispatch:[[FBUploadFileAction alloc] initWithData:[NSData dataWithContentsOfURL:url]]];
+    };
 }
 
 - (void)dealloc {

@@ -46,6 +46,8 @@
     [MainStore unsubscribe:self];
 }
 
+- (void)scrollWheel:(NSEvent *)theEvent {}
+
 #pragma mark - <RxSubscriber>
 
 - (void)onStateChanged:(id<FBAuthorizationState>)state {

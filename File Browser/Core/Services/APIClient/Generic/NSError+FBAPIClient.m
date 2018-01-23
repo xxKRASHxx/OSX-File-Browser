@@ -32,10 +32,16 @@ NSString * const kFBAPIErrorDomain = @"FBAPIClient";
                               userInfo:@{NSLocalizedDescriptionKey: @"Wrong responce type"}]);
 
     guard_ret((![@[@(200), @(202)] containsObject:@(httpResponce.statusCode)]), nil);
+
+    NSString *description =
+    [NSString cast:[NSDictionary cast:[NSArray cast:meta[@"errors"]].firstObject][@"message"]];
+    
     return [NSError errorWithDomain:kFBAPIErrorDomain
                                code:httpResponce.statusCode
                            userInfo:@{@"responce" : responce,
-                                      @"meta" : meta}];
+                                      @"meta" : meta,
+                                      NSLocalizedDescriptionKey : description
+                                      }];
 }
 
 + (NSError *)errorFromStatus:(NSNumber *)code meta:(NSDictionary *)meta {

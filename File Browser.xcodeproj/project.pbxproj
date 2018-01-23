@@ -18,6 +18,8 @@
 		5170E3E42011552B00023444 /* FBAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5170E3E32011552B00023444 /* FBAuthViewController.m */; };
 		5170E3E720115A7900023444 /* FBFileReducer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5170E3E620115A7900023444 /* FBFileReducer.m */; };
 		518D49CF2017DDCC00216A07 /* FBFile+FBURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 518D49CE2017DDCC00216A07 /* FBFile+FBURL.m */; };
+		518D49D22017E6FC00216A07 /* FBDropView.m in Sources */ = {isa = PBXBuildFile; fileRef = 518D49D12017E6FC00216A07 /* FBDropView.m */; };
+		518D49D42017E71E00216A07 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 518D49D32017E71E00216A07 /* AppKit.framework */; };
 		51EE76B0200F7EBF0080D02B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 51EE76AF200F7EBF0080D02B /* AppDelegate.m */; };
 		51EE76B5200F7EBF0080D02B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51EE76B4200F7EBF0080D02B /* Assets.xcassets */; };
 		51EE76B8200F7EBF0080D02B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51EE76B6200F7EBF0080D02B /* Main.storyboard */; };
@@ -79,6 +81,9 @@
 		5170E3E620115A7900023444 /* FBFileReducer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBFileReducer.m; sourceTree = "<group>"; };
 		518D49CD2017DDCC00216A07 /* FBFile+FBURL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FBFile+FBURL.h"; sourceTree = "<group>"; };
 		518D49CE2017DDCC00216A07 /* FBFile+FBURL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FBFile+FBURL.m"; sourceTree = "<group>"; };
+		518D49D02017E6FC00216A07 /* FBDropView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBDropView.h; sourceTree = "<group>"; };
+		518D49D12017E6FC00216A07 /* FBDropView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBDropView.m; sourceTree = "<group>"; };
+		518D49D32017E71E00216A07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		51EE76AB200F7EBF0080D02B /* File Browser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "File Browser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		51EE76AE200F7EBF0080D02B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		51EE76AF200F7EBF0080D02B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -167,6 +172,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				518D49D42017E71E00216A07 /* AppKit.framework in Frameworks */,
 				446D791EB1B340A7419C2729 /* Pods_File_Browser.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -177,6 +183,7 @@
 		3AFBF41FB844F836C5834158 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				518D49D32017E71E00216A07 /* AppKit.framework */,
 				A385834FB6FC18E35534868F /* Pods_File_Browser.framework */,
 			);
 			name = Frameworks;
@@ -502,6 +509,8 @@
 				51FBEDA02017CF6A0061B888 /* FBPreviewItem.h */,
 				51FBEDA12017CF6A0061B888 /* FBPreviewItem.m */,
 				51FBEDA22017CF6A0061B888 /* FBPreviewItem.xib */,
+				518D49D02017E6FC00216A07 /* FBDropView.h */,
+				518D49D12017E6FC00216A07 /* FBDropView.m */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -645,6 +654,7 @@
 				51FBEDA32017CF6A0061B888 /* FBPreviewItem.m in Sources */,
 				51EE76E7200F93080080D02B /* FBAuthorizationReducer.m in Sources */,
 				5170E3CE20113F7800023444 /* FBFile.m in Sources */,
+				518D49D22017E6FC00216A07 /* FBDropView.m in Sources */,
 				51EE76EA200F93970080D02B /* NSObject+Cast.m in Sources */,
 				51FBEDAC2017DA6D0061B888 /* FBWebImageMiddleware.m in Sources */,
 				51EE76E3200F89910080D02B /* FBAppState.m in Sources */,
