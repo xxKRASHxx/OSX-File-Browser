@@ -707,11 +707,11 @@
             <objects>
                 <viewController storyboardIdentifier="FBAuthViewController" id="Mss-1T-vEk" customClass="FBAuthViewController" sceneMemberID="viewController">
                     <view key="view" id="eEw-SB-gGe">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="123"/>
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="257"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="j4h-ac-EXh">
-                                <rect key="frame" x="90" y="81" width="270" height="22"/>
+                                <rect key="frame" x="90" y="215" width="270" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="username" drawsBackground="YES" id="qWh-hq-jal">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -719,7 +719,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HkE-En-800" customClass="NSSecureTextField">
-                                <rect key="frame" x="90" y="49" width="270" height="22"/>
+                                <rect key="frame" x="90" y="183" width="270" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="password" drawsBackground="YES" id="Ll8-0o-GLt">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -736,27 +736,38 @@
                                     </connections>
                                 </buttonCell>
                             </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nnL-H1-PpD">
+                                <rect key="frame" x="224" y="120" width="4" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="6Dm-RV-U4u">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstItem="j4h-ac-EXh" firstAttribute="width" secondItem="eEw-SB-gGe" secondAttribute="width" multiplier="0.6" id="7ba-lF-T8T"/>
                             <constraint firstItem="HkE-En-800" firstAttribute="centerX" secondItem="eEw-SB-gGe" secondAttribute="centerX" id="Fz9-1X-jgg"/>
                             <constraint firstItem="Ari-ps-z2v" firstAttribute="top" relation="greaterThanOrEqual" secondItem="HkE-En-800" secondAttribute="bottom" constant="8" id="MUY-rs-sn1"/>
+                            <constraint firstItem="nnL-H1-PpD" firstAttribute="centerX" secondItem="eEw-SB-gGe" secondAttribute="centerX" id="P96-FB-oNP"/>
                             <constraint firstItem="j4h-ac-EXh" firstAttribute="top" secondItem="eEw-SB-gGe" secondAttribute="top" constant="20" id="Smr-1G-Ivi"/>
                             <constraint firstItem="HkE-En-800" firstAttribute="width" secondItem="eEw-SB-gGe" secondAttribute="width" multiplier="0.6" id="VzG-un-djV"/>
                             <constraint firstItem="HkE-En-800" firstAttribute="top" secondItem="j4h-ac-EXh" secondAttribute="bottom" constant="10" id="XKW-hS-Cjd"/>
                             <constraint firstAttribute="bottom" secondItem="Ari-ps-z2v" secondAttribute="bottom" constant="20" id="bxo-Rj-OaJ"/>
+                            <constraint firstItem="nnL-H1-PpD" firstAttribute="centerY" secondItem="eEw-SB-gGe" secondAttribute="centerY" id="ilS-km-nKI"/>
                             <constraint firstItem="j4h-ac-EXh" firstAttribute="centerX" secondItem="eEw-SB-gGe" secondAttribute="centerX" id="s8t-Mu-2uB"/>
                             <constraint firstItem="Ari-ps-z2v" firstAttribute="centerX" secondItem="eEw-SB-gGe" secondAttribute="centerX" id="zfH-PK-oo1"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="errorLabel" destination="nnL-H1-PpD" id="Egt-S2-qJH"/>
                         <outlet property="passwordTextField" destination="HkE-En-800" id="176-Ok-fqh"/>
                         <outlet property="userNameTextField" destination="j4h-ac-EXh" id="Fbo-yw-PT3"/>
                     </connections>
                 </viewController>
                 <customObject id="yrb-lr-uw3" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-453" y="997"/>
+            <point key="canvasLocation" x="-453" y="1063.5"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="hIz-AP-VOD">
