@@ -718,7 +718,7 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HkE-En-800">
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HkE-En-800" customClass="NSSecureTextField">
                                 <rect key="frame" x="90" y="49" width="270" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="password" drawsBackground="YES" id="Ll8-0o-GLt">
                                     <font key="font" metaFont="system"/>
@@ -790,6 +790,7 @@
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="uRr-NZ-P9L">
                                                 <size key="itemSize" width="200" height="200"/>
+                                                <edgeInsets key="sectionInset" left="24" right="24" top="0.0" bottom="0.0"/>
                                             </collectionViewFlowLayout>
                                             <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <connections>
@@ -809,16 +810,25 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RkA-kd-w9H" customClass="FBDropView">
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="RAX-jz-7yq"/>
+                            </imageView>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="RkA-kd-w9H" firstAttribute="centerX" secondItem="m5i-Hu-6mY" secondAttribute="centerX" id="1sW-Cl-W3b"/>
                             <constraint firstItem="Wit-hd-OCk" firstAttribute="centerX" secondItem="m5i-Hu-6mY" secondAttribute="centerX" id="4Vb-uZ-GG6"/>
+                            <constraint firstItem="RkA-kd-w9H" firstAttribute="centerY" secondItem="m5i-Hu-6mY" secondAttribute="centerY" id="MbF-PI-YaI"/>
+                            <constraint firstItem="RkA-kd-w9H" firstAttribute="height" secondItem="m5i-Hu-6mY" secondAttribute="height" id="OSS-Sr-HQ5"/>
                             <constraint firstItem="Wit-hd-OCk" firstAttribute="centerY" secondItem="m5i-Hu-6mY" secondAttribute="centerY" id="QCg-xo-hJC"/>
                             <constraint firstItem="Wit-hd-OCk" firstAttribute="width" secondItem="m5i-Hu-6mY" secondAttribute="width" id="pXM-vJ-ZsO"/>
+                            <constraint firstItem="RkA-kd-w9H" firstAttribute="width" secondItem="m5i-Hu-6mY" secondAttribute="width" id="yK2-Lg-ND7"/>
                             <constraint firstItem="Wit-hd-OCk" firstAttribute="height" secondItem="m5i-Hu-6mY" secondAttribute="height" id="zUZ-AL-6vx"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="gZe-Ec-YFa" id="J5r-25-jXc"/>
+                        <outlet property="dropView" destination="RkA-kd-w9H" id="f9r-dz-Jcb"/>
                     </connections>
                 </viewController>
                 <customObject id="vQa-Oq-4m9" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

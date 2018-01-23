@@ -14,18 +14,16 @@
 @interface FBAuthViewController ()
 
 @property (weak) IBOutlet NSTextField *userNameTextField;
-@property (weak) IBOutlet NSTextField *passwordTextField;
+@property (weak) IBOutlet NSSecureTextField *passwordTextField;
 
 @end
 
 @implementation FBAuthViewController
 
-- (void)viewDidAppear {
-    [super viewDidAppear];
-    
+- (IBAction)loginButtonClicked:(id)sender {
+    [MainStore dispatch:[[FBSignInAction alloc]
+                         initWithUsername:self.userNameTextField.stringValue
+                         password:self.passwordTextField.stringValue]];
 }
 
-- (IBAction)loginButtonClicked:(id)sender {
-    [MainStore dispatch:[[FBSignInAction alloc] initWithUsername:@"test" password:@"ohiCanRun1"]];
-}
 @end
