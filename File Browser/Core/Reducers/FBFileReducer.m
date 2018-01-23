@@ -74,10 +74,14 @@ id<FBFilesState> finishUpdating (FBUpdateFilesAction *action, id<FBFilesState> s
 
 id<FBFilesState> uploadFile (FBUploadFileAction  *action, id<FBFilesState> state) {
     [[fileService uploadFileWithData:action.data] continueWithBlock:^id _Nullable(BFTask * _Nonnull task) {
-        NSMutableArray *files = state.files.mutableCopy;
-        [files push:task.result];
+        NSMutableArray *files;
+        if (!task.error) {
+            files = state.files.mutableCopy;
+            [files push:task.result];
+        }
+
         [MainStore dispatch:[[FBUpdateFilesAction alloc]
-                             initWithFiles:files.copy
+                             initWithFiles:files ? files.copy : state.files
                              error:task.error]];
         return nil;
     }];
