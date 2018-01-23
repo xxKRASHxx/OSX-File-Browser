@@ -58,11 +58,11 @@
 }
 
 - (void)processUnauthorized:(id<FBAuthorizationState>)state {
-    self.selectedIndex = 0;
+    self.animator.selectedIndex = 0;
 }
 
 - (void)processAuthorized:(id<FBAuthorizationState>)state {
-    self.selectedIndex = 1;
+    self.animator.selectedIndex = 1;
 }
 
 #pragma mark - <NSPageControllerDelegate>
