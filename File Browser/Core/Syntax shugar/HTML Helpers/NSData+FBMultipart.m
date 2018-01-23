@@ -7,7 +7,7 @@
 //
 
 #import "NSData+FBMultipart.h"
-
+#import "NSString+FBHTMLContentType.h"
 @implementation NSData (FBMultipart)
 
 - (instancetype)byMakingMultipartBodyWithBoundary:(NSString *)boundary
@@ -18,7 +18,7 @@
 
     [string appendString:[NSString stringWithFormat:@"\r\n--%@\r\n", boundary]];
     [string appendString:[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"%@\"; filename=\"%@\";\r\n", name, filename]];
-    [string appendString:@"Content-Type: image/jpeg\r\n\r\n"];
+    [string appendString:[NSString stringWithFormat:@"Content-Type: %@\r\n\r\n", filename.contentType]];
 
     [body appendData:[string dataUsingEncoding:NSUTF8StringEncoding]];
     [body appendData:self];

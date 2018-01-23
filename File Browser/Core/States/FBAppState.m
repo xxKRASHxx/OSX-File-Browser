@@ -29,10 +29,9 @@
 }
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"Auth:%@\nFiles:%@",
+    return [NSString stringWithFormat:@"Auth: %@\nFiles: %@",
             self.authorization,
-            self.files
-            ];
+            self.files];
 }
 
 @end

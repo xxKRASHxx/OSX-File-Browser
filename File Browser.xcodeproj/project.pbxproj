@@ -44,6 +44,7 @@
 		51F90793201541D4003B0A05 /* FBUploadFileAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 51F90792201541D4003B0A05 /* FBUploadFileAction.m */; };
 		51F90797201547F9003B0A05 /* NSImage+JPEGRepresentation.m in Sources */ = {isa = PBXBuildFile; fileRef = 51F90796201547F9003B0A05 /* NSImage+JPEGRepresentation.m */; };
 		51F9079A2015540E003B0A05 /* NSData+FBMultipart.m in Sources */ = {isa = PBXBuildFile; fileRef = 51F907992015540E003B0A05 /* NSData+FBMultipart.m */; };
+		51FBED872017A8810061B888 /* NSString+FBHTMLContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 51FBED862017A8810061B888 /* NSString+FBHTMLContentType.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -130,6 +131,8 @@
 		51F90796201547F9003B0A05 /* NSImage+JPEGRepresentation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSImage+JPEGRepresentation.m"; sourceTree = "<group>"; };
 		51F907982015540E003B0A05 /* NSData+FBMultipart.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+FBMultipart.h"; sourceTree = "<group>"; };
 		51F907992015540E003B0A05 /* NSData+FBMultipart.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+FBMultipart.m"; sourceTree = "<group>"; };
+		51FBED852017A8810061B888 /* NSString+FBHTMLContentType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+FBHTMLContentType.h"; sourceTree = "<group>"; };
+		51FBED862017A8810061B888 /* NSString+FBHTMLContentType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+FBHTMLContentType.m"; sourceTree = "<group>"; };
 		A385834FB6FC18E35534868F /* Pods_File_Browser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_File_Browser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -302,6 +305,7 @@
 		51EE76D4200F7FDE0080D02B /* Syntax shugar */ = {
 			isa = PBXGroup;
 			children = (
+				51FBED842017A8520061B888 /* HTML Helpers */,
 				51EE76E0200F89190080D02B /* FBSyntaxShugar.h */,
 				51EE7701200FCF260080D02B /* NSArray+Redux.h */,
 				51EE7702200FCF260080D02B /* NSArray+Redux.m */,
@@ -412,8 +416,6 @@
 				51EE76FF200FCC950080D02B /* FBAPICliendResult.m */,
 				51EE7704200FD04E0080D02B /* NSError+FBAPIClient.h */,
 				51EE7705200FD04E0080D02B /* NSError+FBAPIClient.m */,
-				51F907982015540E003B0A05 /* NSData+FBMultipart.h */,
-				51F907992015540E003B0A05 /* NSData+FBMultipart.m */,
 			);
 			path = Generic;
 			sourceTree = "<group>";
@@ -425,6 +427,17 @@
 				51F90796201547F9003B0A05 /* NSImage+JPEGRepresentation.m */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		51FBED842017A8520061B888 /* HTML Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				51FBED852017A8810061B888 /* NSString+FBHTMLContentType.h */,
+				51FBED862017A8810061B888 /* NSString+FBHTMLContentType.m */,
+				51F907982015540E003B0A05 /* NSData+FBMultipart.h */,
+				51F907992015540E003B0A05 /* NSData+FBMultipart.m */,
+			);
+			path = "HTML Helpers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -563,6 +576,7 @@
 				5170E3C7201135F000023444 /* FBAPIBuilder+FBFileService.m in Sources */,
 				51EE770D200FD1D10080D02B /* FBAPIParser.m in Sources */,
 				5170E3E42011552B00023444 /* FBViewController.m in Sources */,
+				51FBED872017A8810061B888 /* NSString+FBHTMLContentType.m in Sources */,
 				5170E3DC20114B7D00023444 /* FBFilesState.m in Sources */,
 				51F9079A2015540E003B0A05 /* NSData+FBMultipart.m in Sources */,
 				51EE7700200FCC950080D02B /* FBAPICliendResult.m in Sources */,

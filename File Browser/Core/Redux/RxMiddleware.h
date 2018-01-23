@@ -13,7 +13,7 @@
 
 typedef id (^RxDispatchFunction)(id<RxAction> action);
 
-typedef id<RxState> (^RxGetState)();
+typedef id<RxState> (^RxGetState)(void);
 
 typedef RxDispatchFunction (^RxDispatchFunctionChain)(RxDispatchFunction);
 

@@ -8,9 +8,17 @@
 
 #import "FBAuthorizationState.h"
 
-@implementation FBAuthorizationStateUnauthorized @end
+@implementation FBAuthorizationStateUnauthorized
 
-@implementation FBAuthorizationStateAuthorizing @end
+- (NSString *)description { return @"Unauthorized"; }
+
+@end
+
+@implementation FBAuthorizationStateAuthorizing
+
+- (NSString *)description { return @"Authorizing"; }
+
+@end
 
 @interface FBAuthorizationStateError()
 
@@ -27,6 +35,8 @@
     }
     return self;
 }
+
+- (NSString *)description { return [NSString stringWithFormat:@"Error: %@", self.error]; }
 
 @end
 
@@ -54,5 +64,7 @@
     }
     return self;
 }
+
+- (NSString *)description { return[NSString stringWithFormat:@"Authorized as %@", self.username]; }
 
 @end
