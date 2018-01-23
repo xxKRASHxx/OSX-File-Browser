@@ -4,10 +4,14 @@ PODS:
     - Bolts/Tasks (= 1.9.0)
   - Bolts/Tasks (1.9.0)
   - ObjectiveSugar (1.1.1)
+  - SDWebImage (4.2.3):
+    - SDWebImage/Core (= 4.2.3)
+  - SDWebImage/Core (4.2.3)
 
 DEPENDENCIES:
   - Bolts
   - ObjectiveSugar (from `https://github.com/SergeyBulyno/ObjectiveSugar.git`)
+  - SDWebImage
 
 EXTERNAL SOURCES:
   ObjectiveSugar:
@@ -21,7 +25,8 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   ObjectiveSugar: 0729eb74a757ea48b109a8902178c9b89aa58a9f
+  SDWebImage: 791bb72962b3492327ddcac4b1880bd1b5458431
 
-PODFILE CHECKSUM: 234cfc08e3767cf75f73a5092b61d88d22133614
+PODFILE CHECKSUM: 0c38ee647f240bfeb7d59e0d8536e98bc45523a0
 
 COCOAPODS: 1.1.1

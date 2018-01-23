@@ -9,7 +9,7 @@
 #import "FBPrefetchFilesMiddleware.h"
 #import "FBAppState.h"
 #import "FBAuthorizationState.h"
-#import "AppDelegate.h"
+#import "FBWindowController.h"
 #import "FBFetchFilesAction.h"
 
 RxMiddleware FBPrefetchFilesMiddleware = ImplementMiddleware({

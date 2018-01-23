@@ -7,7 +7,7 @@
 //
 
 #import "FBAuthorizationReducer.h"
-#import "AppDelegate.h"
+#import "FBWindowController.h"
 #import "FBAuthorizationState.h"
 #import "NSError+FBAPIClient.h"
 #import "FBAPIClient+FBAuthService.h"
