@@ -13,14 +13,14 @@
 #define guard_ret(x, retVal) if (!(x)) return (retVal);
 #define guard_break(x) if (!(x)) break;
 
-#define NSValueFromPrimitive(primitive) ([NSValue value:&primitive withObjCType:@encode(typeof(primitive))])
-#define cast_to(value, protocolType) ([value conformsToProtocol:@protocol(protocolType)] ? value : nil)
+#define wait(x) while(x) {};
 
-#define CLAMP(x, low, high) ({\
-__typeof__(x) __x = (x); \
-__typeof__(low) __low = (low);\
-__typeof__(high) __high = (high);\
-__x > __high ? __high : (__x < __low ? __low : __x);\
-})
+#define weakify(var) __weak typeof(var) weak_##var = var;
+
+#define strongify(var) \
+    _Pragma("clang diagnostic push") \
+    _Pragma("clang diagnostic ignored \"-Wshadow\"") \
+    __strong typeof(var) var = weak_##var; \
+    _Pragma("clang diagnostic pop")
 
 #endif /* FBSyntaxShugar_h */
