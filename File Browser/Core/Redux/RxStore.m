@@ -8,10 +8,7 @@
 
 #import "RxStore.h"
 #import "NSArray+Redux.h"
-#import "Macros.h"
-
 #import <stdatomic.h>
-//#import <stdio.h>
 
 @interface RxSubscription : NSObject
 
