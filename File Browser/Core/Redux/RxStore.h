@@ -14,30 +14,27 @@
 #import "RxSubscriber.h"
 #import "RxMiddleware.h"
 
-@protocol RxStore;
-
-
 typedef id<RxState> (^RxStateSelector)(id<RxState> state);
-
 
 @protocol RxStore <NSObject>
 
 @property (strong, nonatomic, readonly) id<RxState> state;
 
-- (instancetype) initWithState:(id<RxState>)rootState reducer:(RxReducer)rootReducer;
-- (instancetype) initWithState:(id<RxState>)rootState reducer:(RxReducer)rootReducer middlewares:(NSArray<RxMiddleware>*)middlewares;
+- (instancetype) initWithState:(id<RxState>)rootState
+                       reducer:(RxReducer)rootReducer;
 
-- (void) subscribe:(id<RxSubscriber>)subscriber;
-- (void) subscribe:(id<RxSubscriber>)subscriber withStateSelector:(RxStateSelector)stateSelector;
-- (void) unsubscribe:(id<RxSubscriber>)subscriber;
+- (instancetype) initWithState:(id<RxState>)rootState
+                       reducer:(RxReducer)rootReducer
+                   middlewares:(NSArray<RxMiddleware> *)middlewares;
 
-- (id) dispatch:(id<RxAction>)action;
+- (void)subscribe:(id<RxSubscriber>)subscriber;
+- (void)subscribe:(id<RxSubscriber>)subscriber withStateSelector:(RxStateSelector)stateSelector;
+- (void)unsubscribe:(id<RxSubscriber>)subscriber;
+
+- (id)dispatch:(id<RxAction>)action;
 
 @end
 
+@interface RxStore: NSObject <RxStore>
 
-
-
-@interface RxStore : NSObject <RxStore>
-@property (strong, nonatomic, readonly) id<RxState> state;
 @end
